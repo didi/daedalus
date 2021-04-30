@@ -1,0 +1,219 @@
+.edit {
+  background: white;
+  .title {
+    margin: 0 20px 0px 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    button {
+      margin: 0 10px;
+    }
+  }
+  .content {
+    padding: 0px 20px 20px;
+    overflow: hidden;
+    .allGroups {
+      background: rgb(242, 242, 242);
+      height: calc(100vh - 170px);
+      width: 240px;
+      padding: 10px;
+      float: left;
+      overflow-y: scroll;
+      .group {
+        float: left;
+        width: 217px;
+        border-bottom: 1px solid;
+        margin-bottom: 5px;
+        &:last-child {
+          border-bottom: 0;
+          margin-bottom: 0;
+        }
+        .groupTitle {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          line-height: 32px;
+          .plus-circle {
+            line-height: 36px;
+            cursor: pointer;
+          }
+          h3 {
+            margin: 0;
+          }
+        }
+        .groupContent {
+          background: rgb(215, 215, 215);
+          padding: 10px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          .name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            &:hover {
+              a{
+                display: block;
+              }
+            }
+            span {
+              font-weight: 600;
+              font-size: 15px;
+              color: black;
+              width: calc(100% - 60px);
+            }
+            a {
+              display: none;
+              span {
+                color: blueviolet;
+              }
+            }
+          }
+          .remarks {
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            span:nth-child(1){
+              width: 65%;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap; 
+            }
+          }
+        }
+        .btn {
+          background: rgb(215, 215, 215);
+          padding: 10px;
+          margin-bottom: 10px;
+          position: relative;
+          height: 30vh;
+          button {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+          }
+        }
+      }
+    }
+    .xmind {
+      float: left;
+    }
+  }
+  .minimap {
+    position: absolute;
+    top: 123px;
+    left: 260px;
+    background: white;
+  }
+  .nodeCanvas {
+    background-image: linear-gradient(#e4e4e4 1px, transparent 1px), linear-gradient(90deg, #e4e4e4 1px, transparent 1px);
+    background-size: 15px 15px, 15px 15px, 5px 5px, 5px 5px;
+  }
+}
+// 调试
+.debug {
+  .noExpand {
+    .ant-table-row-expand-icon {
+      display: none
+    }
+  }
+  .textarea {
+    min-height: 100px;
+    margin: 0 80px 20px;
+    padding: 10px  20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.65);
+    word-wrap : break-word;
+  }
+  .journal {
+    color: white;
+    .leftTitle, .centerTitle, .rightTitle {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-bottom: 1px solid white;
+    }
+    .leftTitle, .leftContent {
+      border-right: 1px solid white;
+      background: #181f2b
+    }
+    .centerTitle, .centerContent {
+      border-right: 1px solid white;
+      background: #262626
+    }
+    .rightTitle, .rightContent {
+      background: #262626
+    }
+    .leftContent, .centerContent, .rightContent {
+      padding: 10px 20px;
+      font-size: 14px;
+      min-height: 500px;
+    }
+    .spaceBetween {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .ant-switch {
+        background-color: rgb(175, 165, 165);
+      }
+      .ant-switch-checked {
+        background-color: #1890ff
+      }
+    }
+  }
+  .tree {
+    .ant-tree-switcher {
+      background: none !important;
+      color: skyblue !important;
+    }
+    .ant-tree-node-content-wrapper {
+      color: white !important;
+      :hover{
+        background: none !important;
+        color: black !important;
+      }
+      .ant-tree-title {
+        display: inline-block !important;
+      }
+    }
+    .ant-tree-node-selected {
+      color: black !important;
+    }
+  }
+  .tabpane {
+    .ant-form-item-label {
+      line-height: 32px;
+    }
+  }
+}
+// http类型
+.httpCollapse {
+  margin: 10px 0 10px 7% !important;
+  .ant-collapse-content {
+    overflow: inherit;
+  }
+  .ant-collapse-header {
+    background: #fafafa;
+  }
+  .ant-collapse-content-box {
+    .ant-form-item:nth-last-child(1){
+      margin-bottom: 0px !important;
+    }
+  }
+}
+// 抽屉button
+.drawewButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #e9e9e9;
+  padding: 10px 16px;
+  background: #fff;
+  text-align: right;
+  z-index: 99;
+}

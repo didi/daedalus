@@ -1,0 +1,45 @@
+/** 顶部 */
+.header {
+  .header_title {
+    float: left;
+    color: white;
+    font-size: 30px;
+    margin-right: 50px
+  }
+}
+/** 固钉样式 */
+.allAffix{
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 55px;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px 0 rgba(51,51,51,0.30);
+  .affix{
+    height: 44px;
+    width: 44px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: #333;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+/** 顶部搜索框 */
+.header_input {
+  position: absolute !important;
+  right: 150px;
+  top: 16px;
+  width: 250px;
+}
+@media screen and (min-width: 1450px) {
+  .header_input {
+    width: 300px;
+  }
+}

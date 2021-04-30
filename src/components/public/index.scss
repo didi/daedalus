@@ -1,0 +1,14 @@
+.CodeMirror {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  line-height: 1.5;
+  .CodeMirror-cursor {
+    height: 21px;
+  }
+  .CodeMirror-scroll {
+    min-height: 200px;
+  }
+}
+.CodeMirror-hints {
+  z-index: 99999999;
+}

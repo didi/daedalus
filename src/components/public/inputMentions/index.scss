@@ -1,0 +1,11 @@
+.mentionInput {
+  .mentionInput__input::placeholder {
+    color: rgb(191, 191, 191);
+  }
+  .mentionInput__input:focus {
+    border: 1px solid #40a9ff !important;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important;
+    outline: 0;
+  }
+}

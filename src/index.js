@@ -1,17 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { hot } from 'react-hot-loader';
+import { Layout } from 'antd';
+import { HashRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Header from './layout/header';
+import Footer from './layout/footer';
+import Affix from './layout/affix';
+import HeaderInput from './layout/headerInput';
+import RouterConFig from './router';
+import store from './store';
+import './index.scss';
+import 'antd/dist/antd.css';
+import './static/icon_font/iconfont.css';
 
+class APP extends Component  {
+
+  render(){
+    return (
+      <Router>
+        <Layout id="App">
+          <Header />
+          <HeaderInput />
+          <RouterConFig />
+          <Footer />
+          <Affix />
+        </Layout>
+      </Router>
+    );
+  }
+}
+
+let Entry = hot(module)(APP);
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Entry />
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

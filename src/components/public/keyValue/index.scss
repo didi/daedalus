@@ -1,0 +1,74 @@
+.keyValueTitle {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500
+}
+.ant-form-item-control {
+  line-height: 32px !important;
+}
+.rightName {
+  padding: 0 10px !important
+}
+.keyValueName {
+  padding: 0 10px !important;
+  // margin-top: -4px !important
+}
+.keyValueValue {
+  font-size: 18px;
+  line-height: 40px
+}
+.operating {
+  margin-left: 4%;
+}
+.icon {
+  cursor: pointer;
+  margin-right: 5px;
+}
+.parentAdd {
+  color: #0026f9;
+  font-size: 14px;
+}
+.parentDelete {
+  color: #ff561b;
+  font-size: 14px;
+}
+.chidlrenAdd {
+  color:#2395f1;
+  font-size: 14px;
+}
+.childrenDelete {
+  color: #00a854;
+  font-size: 14px;
+}
+.cursor {
+  cursor: pointer;
+  font-size: 14px;
+  transform: rotate(90deg);
+}
+.wordBreak {
+  word-break: break-all
+}
+.headerName {
+  margin-left: 1% !important;
+  width: 110% !important;
+}
+.promptMsg {
+  color: red;
+  font-size: 12px
+}
+.extractTitle {
+  margin-bottom: 0;
+  // margin-left: 16.5%
+}
+.m_b_10 {
+  margin-bottom: 10px;
+}
+.sqlPrompt {
+  font-size: 12px;
+  margin-top: -10px;
+  line-height: 14px;
+}
+.promptBig {
+  font-weight: 600;
+  color: black;
+}

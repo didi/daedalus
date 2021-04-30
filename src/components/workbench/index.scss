@@ -1,0 +1,42 @@
+// 工作台
+.work {
+  padding: 0 50px;
+  .cursor {
+    cursor: pointer;
+  }
+  .operation {
+    display: flex;
+    justify-content: space-around;
+    .actionItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      i {
+        font-size: 40px;
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .bisectionRow {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    .col{
+      flex: 1;
+      .ant-card {
+        height: 100%;
+      }
+    }
+    .pr_10 {
+      padding-right: 10px;
+    }
+    .pl_10 {
+      padding-left: 10px;
+    }
+  }
+}
+// 查看更多
+.moretable {
+  padding: 20px 50px 0 50px;
+}
