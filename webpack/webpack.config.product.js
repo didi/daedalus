@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 var definePlugin = new webpack.DefinePlugin({
   'process.env': {
     NODE_ENV: '"production"',
@@ -121,5 +122,8 @@ module.exports = {
       template: path.resolve(__dirname, '../public/index.product.html'),
       // chunks: ['main','react','ant']
     }),
+    new MonacoWebpackPlugin([
+      'javascript', 'mysql', 'redis', 'typescript', 'java', 'sql'
+    ]),
   ],
 }
