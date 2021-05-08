@@ -2,6 +2,7 @@ var devServer = require('webpack-dev-server')
 var webpack = require('webpack')
 var path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 module.exports = (env) => {
   return {
     devtool: 'source-map',
@@ -101,6 +102,9 @@ module.exports = (env) => {
         template: path.resolve(__dirname, '../public/index.html'),
         chunks: ['react', 'antd', 'main'],
       }),
+      new MonacoWebpackPlugin([
+        'javascript', 'mysql', 'redis', 'typescript', 'java', 'sql'
+      ]),
     ],
   }
 }
