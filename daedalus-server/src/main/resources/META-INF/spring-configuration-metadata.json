@@ -1,0 +1,83 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo",
+      "type": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.application",
+      "sourceMethod": "getApplication()",
+      "type": "org.apache.dubbo.config.ApplicationConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.config",
+      "sourceMethod": "getConfig()",
+      "type": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties$Config"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.config-center",
+      "sourceMethod": "getConfigCenter()",
+      "type": "org.apache.dubbo.config.spring.ConfigCenterBean"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.consumer",
+      "sourceMethod": "getConsumer()",
+      "type": "org.apache.dubbo.config.ConsumerConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.metadata-report",
+      "sourceMethod": "getMetadataReport()",
+      "type": "org.apache.dubbo.config.MetadataReportConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.module",
+      "sourceMethod": "getModule()",
+      "type": "org.apache.dubbo.config.ModuleConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.monitor",
+      "sourceMethod": "getMonitor()",
+      "type": "org.apache.dubbo.config.MonitorConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.protocol",
+      "sourceMethod": "getProtocol()",
+      "type": "org.apache.dubbo.config.ProtocolConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.provider",
+      "sourceMethod": "getProvider()",
+      "type": "org.apache.dubbo.config.ProviderConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.registry",
+      "sourceMethod": "getRegistry()",
+      "type": "org.apache.dubbo.config.RegistryConfig"
+    },
+    {
+      "sourceType": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties",
+      "name": "dubbo.scan",
+      "sourceMethod": "getScan()",
+      "type": "org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties$Scan"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.apache.dubbo.config.ApplicationConfig",
+      "name": "daedalus.env",
+      "type": "java.lang.String"
+    }
+  ]
+}
