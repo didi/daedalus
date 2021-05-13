@@ -8,12 +8,13 @@ import lombok.Getter;
  */
 @Getter
 public enum BizLineEnum {
-    DEFAULT(0, "通用"),
+    DEFAULT(0, "通用")
     ;
 
     BizLineEnum(int code, String bizName) {
         this.code = code;
         this.bizName = bizName;
     }
+    private int code;
     private String bizName;
 }

@@ -99,7 +99,7 @@ export default class Headers extends Component {
           <SubMenu title={<span>实例管理</span>} key="manage">
             <Menu.Item key="envManage"><Link to="/envManage">环境管理</Link></Menu.Item>
             <Menu.Item key="mysql"><Link to="/exampleManage/mysql">MYSQL</Link></Menu.Item>
-            <Menu.Item key="redis"><Link to="/exampleManage/redis">Redis/Fusion</Link></Menu.Item>
+            <Menu.Item key="redis"><Link to="/exampleManage/redis">Redis</Link></Menu.Item>
             <Menu.Item key="http"><Link to="/exampleManage/http">HTTP模板</Link></Menu.Item>
 //            <Menu.Item key="es"><Link to="/exampleManage/es">ES</Link></Menu.Item>
             <Menu.Item key="registry"><Link to="/exampleManage/registry">注册中心</Link></Menu.Item>

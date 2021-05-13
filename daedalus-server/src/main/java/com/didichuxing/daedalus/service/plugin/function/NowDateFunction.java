@@ -9,12 +9,14 @@ import com.googlecode.aviator.runtime.type.AviatorString;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -38,10 +40,16 @@ public class NowDateFunction extends AbstractVariadicFunction {
                 nowDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             } else if (args.length == 1) {
                 String format = String.valueOf(args[0].getValue(env));
+                if (StringUtils.isBlank(format)) {
+                    throw new ExecuteException("nowDate函数执行异常，请检查格式！");
+                }
                 nowDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern(format));
             } else if (args.length == 2) {
                 LocalDateTime now = LocalDateTime.now();
                 String format = String.valueOf(args[0].getValue(env));
+                if (StringUtils.isBlank(format)) {
+                    throw new ExecuteException("nowDate函数执行异常，请检查格式！");
+                }
                 String opt = String.valueOf(args[1].getValue(env));
                 List<String> opts = Splitter.onPattern("(?=\\+)|(?=-)").omitEmptyStrings().trimResults().splitToList(opt);
                 for (String o : opts) {
@@ -77,12 +85,8 @@ public class NowDateFunction extends AbstractVariadicFunction {
         return "nowDate";
     }
 
-    public static void main(String[] args) {
-        AviatorEvaluator.addFunction(new NowDateFunction());
-        System.out.println(AviatorEvaluator.execute("nowDate()"));
-        System.out.println(AviatorEvaluator.execute("nowDate('yyyy-MM-dd hh:mm:ss')"));
-        System.out.println(AviatorEvaluator.execute("nowDate('yyyy-MM-dd hh:mm:ss','+10d-10s')"));
-    }
+
+
 
 
     @AllArgsConstructor

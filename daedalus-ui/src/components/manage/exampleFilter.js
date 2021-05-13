@@ -35,7 +35,7 @@ class ExampleFilter extends Component {
         <h2>
           {type === 'http' && 'HTTP模板'}
           {type === 'mysql' && 'MYSQL实例'}
-          {type === 'redis' && 'Redis/Fusion实例'}
+          {type === 'redis' && 'Redis/实例'}
           {type === 'es' && 'ES实例'}
           {type === 'registry' && '注册中心'}
         </h2>

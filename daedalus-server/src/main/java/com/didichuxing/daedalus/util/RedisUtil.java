@@ -28,23 +28,6 @@ public class RedisUtil {
     }
 
 
-    public static void main(String[] args) {
-        long l = System.currentTimeMillis();
-//        RedisClient redisClient = RedisClient.create("redis://10.96.88.82:6379");
-//        StatefulRedisConnection<String, String> connect = redisClient.connect();
-//        RedisCommands<String, String> sync = connect.sync();
-//        System.out.println(System.currentTimeMillis() - l);
 
-        long s = System.currentTimeMillis();
 
-        JedisPool jedisPool = new JedisPool("10.96.88.82", 6379);
-        Jedis resource = jedisPool.getResource();
-        Object o = resource.sendCommand(Protocol.Command.HSET, "test", "name", "a");
-        Object o2 = resource.sendCommand(Protocol.Command.HGET, "test", "name");
-        Object o3 = resource.sendCommand(Protocol.Command.HGETALL, "test");
-
-        System.out.println(o);
-        System.out.println(o2);
-        System.out.println(System.currentTimeMillis() - s);
-    }
 }

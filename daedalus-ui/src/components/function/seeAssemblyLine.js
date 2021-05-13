@@ -69,7 +69,7 @@ class SeeAssemblyLine extends Component {
   }
   // 获取实例数据
   getInsType = type => {
-    if (type !== '连接步骤' || type !== '连接步骤' || type !== 'GROOVY' || type !== 'DDMQ') {
+    if (type !== '连接步骤' || type !== '连接步骤' || type !== 'GROOVY' ) {
       if (type === 'DUBBO') type = 'REGISTRY';
       request(`/instance/list`, {
         method: 'GET',

@@ -85,10 +85,8 @@ public class SwaggerUtil {
 
     }
 
-    public static void main(String[] args) {
-        List<HttpStep> httpSteps = parseSwagger("http://10.179.16.58:8580");
-        System.out.println(httpSteps);
-    }
+
+
 
 
 }

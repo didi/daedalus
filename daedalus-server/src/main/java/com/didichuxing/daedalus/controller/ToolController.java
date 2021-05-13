@@ -3,13 +3,15 @@ package com.didichuxing.daedalus.controller;
 import com.didichuxing.daedalus.common.Response;
 import com.didichuxing.daedalus.common.dto.step.HttpStep;
 import com.didichuxing.daedalus.pojo.BizException;
-import com.didichuxing.daedalus.util.CurlUtil;
 import com.didichuxing.daedalus.util.EnvUtil;
 import com.didichuxing.daedalus.util.SwaggerUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -36,9 +38,4 @@ public class ToolController {
     }
 
 
-    @PostMapping("curl")
-    @ApiOperation(value = "curl解析")
-    public Response<HttpStep> curl(@RequestBody String curlCommand) {
-        return Response.sucResp(CurlUtil.parse(curlCommand));
-    }
 }

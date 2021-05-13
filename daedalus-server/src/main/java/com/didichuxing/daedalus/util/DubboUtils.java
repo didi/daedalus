@@ -121,34 +121,6 @@ public class DubboUtils {
         }
     }
 
-    public static void main(String[] args) throws JsonProcessingException {
-        String ss = "[\n" +
-                "    {\n" +
-                "        \"aa\": \"bb\",\n" +
-                "        \"ab\": {\n" +
-                "            \"cc\": 233\n" +
-                "        }\n" +
-                "    }\n" +
-                "]";
-
-        String sss = "[1,2,3,4]";
 
 
-        List list2 = JSON.parseObject(ss, List.class);
-        List list3 = JSON.parseObject(sss, List.class);
-
-        List<DubboParam<String, String>> params = new ArrayList<>();
-        params.add(DubboParam.of("com.xiaoju.automarket.car.bill.entity.request.BillFeeRemissionRequest", "{\"sign\":\"QWERTYUIOPASDFGHJKLZXCVBNM-test\",\"billId\":\"288230376152061811\",\"remissionItems\":[{\"feeItem\":\"112\",\"amount\":\"2999\"}]}"));
-
-
-//        Object ret = invokeGeneric("com.xiaoju.automarket.car.bill.provider.BillService ", "billFeeRemission", null, null, "1.0.0", "127.0.0.1:20881", params);
-//        System.out.println(JSON.toJSONString(ret));
-
-
-        List list = new ObjectMapper().readValue(ss, List.class);
-
-        List list1 = new ObjectMapper().readValue(sss, List.class);
-
-        System.out.println(list);
-    }
 }

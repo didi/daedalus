@@ -391,14 +391,13 @@ class ExampleManage extends Component {
             <Form.Item label="类型" {...envOrExampleLayout} >
               {getFieldDecorator('protocol', {
                 rules: [{ required: true, message: '请选择类型！' }],
-                initialValue: title === '添加实例' ? 'disf' : record.protocol
+                initialValue: title === '添加实例' ? 'zookeeper' : record.protocol
               })(
                 <Select
                   style={{ width: '100%' }}
                   placeholder="请选择类型"
                 >
-                  <Option key="disf" value="disf">disf</Option>
-                  {/* <Option key="zookeeper" value="zookeeper">zookeeper</Option> */}
+                  <Option key="zookeeper" value="zookeeper">zookeeper</Option>
                 </Select>
               )}
             </Form.Item>
