@@ -4,8 +4,6 @@ import com.didichuxing.daedalus.common.enums.OperatorEnum;
 import com.didichuxing.daedalus.entity.step.additional.ConditionEntity;
 import com.didichuxing.daedalus.entity.step.additional.RuleEntity;
 import com.didichuxing.daedalus.pojo.ExecuteException;
-import com.googlecode.aviator.AviatorEvaluator;
-import com.googlecode.aviator.exception.ExpressionSyntaxErrorException;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
@@ -49,15 +47,9 @@ public class RuleUtil {
         if (containVar(expression)) {
             throw new ExecuteException(String.format("变量%s缺失！", RegexUtil.getVars(expression)));
         }
-        try {
-            return (boolean) AviatorEvaluator.execute(expression, env);
-        } catch (Exception e) {
-            if (e instanceof ExpressionSyntaxErrorException) {
-                throw new ExecuteException("条件表达式有误！请检查！");
-            } else {
-                throw new ExecuteException("条件执行失败，请检查！");
-            }
-        }
+        //TODO 表达式判断
+        return false;
+
     }
 
 

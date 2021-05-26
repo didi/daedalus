@@ -82,11 +82,8 @@
                 <artifactId>guava</artifactId>
                 <version>21.0</version>
             </dependency>
-            <dependency>
-                <groupId>com.googlecode.aviator</groupId>
-                <artifactId>aviator</artifactId>
-                <version>5.0.0</version>
-            </dependency>
+
+
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
@@ -104,11 +101,8 @@
                 <version>2.5.7</version>
                 <type>pom</type>
             </dependency>
-            <dependency>
-                <groupId>org.python</groupId>
-                <artifactId>jython-standalone</artifactId>
-                <version>2.7.2</version>
-            </dependency>
+
+
 
 
         </dependencies>

@@ -3,8 +3,6 @@ package com.didichuxing.daedalus.service;
 import com.didichuxing.daedalus.entity.step.additional.AssertEntity;
 import com.didichuxing.daedalus.entity.step.additional.ConditionEntity;
 import com.didichuxing.daedalus.pojo.ExecuteException;
-import com.googlecode.aviator.AviatorEvaluator;
-import com.googlecode.aviator.exception.FunctionNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.ClassUtils;
@@ -15,10 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.BiConsumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -132,20 +128,13 @@ public class VariableProcessor {
                 throw new ExecuteException("变量" + variable + "的值请只使用基本类型！不支持对象或数组！");
             }
         } else {
-            try {
-                Object result = AviatorEvaluator.execute(variable, new HashMap<>(variables));
-                stringBuilder.replace(start, end, String.valueOf(result));
-            } catch (ExecuteException e) {
-                throw e;
-            } catch (FunctionNotFoundException e) {
-                log.warn("函数不存在，表达式执行失败！", e);
-                throw new ExecuteException("函数 " + variable + "不存在！");
-            } catch (Exception e) {
-                log.warn("表达式执行失败！", e);
-                throw new ExecuteException("函数 " + variable + "执行失败！");
-            }
+            log.warn("函数不存在，表达式执行失败！");
+            throw new ExecuteException("函数 " + variable + "不存在！");
+
 
         }
 
     }
+
 }
+
